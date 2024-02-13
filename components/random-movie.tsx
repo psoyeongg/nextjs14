@@ -21,16 +21,20 @@ export default function RandomMovie({
   return (
     <div className={styles.random}>
       <div
-        className={styles.backdrop}
         style={{
+          margin: 0,
+          width: "100vw",
+          height: "100vh",
           background: `linear-gradient(
             to bottom,
-            rgba(20, 20, 20, 0.3) 30%,
             rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.3) 30%,
             rgba(20, 20, 20, 0.3) 30%,
             rgba(20, 20, 20, 0.95) 95%,
             rgba(20, 20, 20, 1) 100%
           ), url(${backdrop_path})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       />
       <div className={styles.info}>
