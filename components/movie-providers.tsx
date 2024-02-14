@@ -30,7 +30,35 @@ export default function MovieProviders({ id }: { id: string }) {
         ))}
       </select>
       <div className={styles.providers}>
-        {providers[contury].flatrate.map(
+        {providers[contury].flatrate?.map(
+          ({ provider_id, provider_name, logo_path }) => (
+            <div key={provider_id}>
+              <img
+                width={30}
+                height={30}
+                src={`	https://media.themoviedb.org/t/p/original${logo_path}`}
+                alt={provider_name}
+              />
+            </div>
+          )
+        )}
+      </div>
+      <div className={styles.providers}>
+        {providers[contury].recent?.map(
+          ({ provider_id, provider_name, logo_path }) => (
+            <div key={provider_id}>
+              <img
+                width={30}
+                height={30}
+                src={`	https://media.themoviedb.org/t/p/original${logo_path}`}
+                alt={provider_name}
+              />
+            </div>
+          )
+        )}
+      </div>
+      <div className={styles.providers}>
+        {providers[contury].buy?.map(
           ({ provider_id, provider_name, logo_path }) => (
             <div key={provider_id}>
               <img
