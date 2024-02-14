@@ -34,9 +34,9 @@ export default function Navigation() {
         <li className={path === "/" ? styles.active : styles.noActive}>
           <Link href='/'>Home</Link>
         </li>
-        <li className={path === "/about-us" ? styles.active : styles.noActive}>
+        {/* <li className={path === "/about-us" ? styles.active : styles.noActive}>
           <Link href='/about-us'>About Us</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
