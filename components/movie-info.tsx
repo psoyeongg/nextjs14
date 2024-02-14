@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { API_URL } from "../app/constants";
 import styles from "../styles/movie-info.module.css";
+import { Suspense } from "react";
+import MovieProviders from "./movie-providers";
 
 export async function getMovie(id: string) {
   const response = await fetch(`${API_URL}/${id}`);
@@ -42,6 +44,7 @@ export default async function MovieInfo({
               &ensp;|&ensp; */}
               <Link href={`/movies/${id}/similar`}>Similar movies</Link>
             </div>
+            <MovieProviders id={id} />
           </div>
         </>
       )}
