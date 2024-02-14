@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+}
+
+.container h3 {
+  padding-top: 10px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 100px;
+}
